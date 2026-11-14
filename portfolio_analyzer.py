@@ -20,12 +20,48 @@ import matplotlib.dates as mdates
 # 1. CONFIGURE YOUR PORTFOLIO HERE
 # ---------------------------------------------------------------------------
 PORTFOLIO = {
-    "NVDA": 0.30,   # semiconductors / AI growth — overweighted conviction bet
-    "JPM":  0.20,   # financials
-    "JNJ":  0.20,   # healthcare
-    "KO":   0.15,   # consumer staples
-    "CROX": 0.15,   # mid-cap consumer growth
+    "ADBE":  0.025,
+    "GOOGL": 0.025,
+    "APH":   0.025,
+    "ADI":   0.025,
+    "APA":   0.025,
+    "AMAT":  0.025,
+    "APP":   0.025,
+    "ALAB":  0.025,
+    "BKNG":  0.025,
+    "AVGO":  0.025,
+    "COF":   0.025,
+    "CAT":   0.025,
+    "CRBG":  0.025,
+    "CRDO":  0.025,
+    "EXPE":  0.025,
+    "FIGR":  0.025,
+    "YMM":   0.025,
+    "KLAC":  0.025,
+    "KGS":   0.025,
+    "MGNI":  0.025,
+    "MTCH":  0.025,
+    "MU":    0.025,
+    "NFLX":  0.025,
+    "NVDA":  0.025,
+    "NXPI":  0.025,
+    "ONON":  0.025,
+    "PAGS":  0.025,
+    "PDD":   0.025,
+    "PR":    0.025,
+    "RDDT":  0.025,
+    "RYAN":  0.025,
+    "SNDK":  0.025,
+    "STX":   0.025,
+    "SM":    0.025,
+    "SYF":   0.025,
+    "TAL":   0.025,
+    "VRT":   0.025,
+    "VST":   0.025,
+    "WDC":   0.025,
+    "ZTO":   0.025,
 }
+
 
 START_DATE = "2021-01-01"
 END_DATE = None          # None = through today
