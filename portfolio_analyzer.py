@@ -62,9 +62,9 @@ PORTFOLIO = {
     "ZTO":   0.025,
 }
 
-
-START_DATE = "2021-01-01"
-END_DATE = None          # None = through today
+START_DATE = "2025-09-01"
+END_DATE = "2026-11-01"
+ # None = through today
 RISK_FREE_RATE = 0.045   # annualized, e.g. current ~T-bill yield
 TRADING_DAYS = 252
 
