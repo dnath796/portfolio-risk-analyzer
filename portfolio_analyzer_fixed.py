@@ -30,6 +30,72 @@ START = "2025-10-01"  # preceding month to compute October 2025 return
 END_EXCLUSIVE = "2026-11-01"  # stop after October 2026
 FIRST_RETURN_MONTH = "2025-11-30"
 LAST_RETURN_MONTH = "2026-10-31"
+
+# 20 years data
+
+# PORTFOLIO = {
+#     "ADBE": 1/17,
+#     "GOOGL": 1/17,
+#     "APH": 1/17,
+#     "ADI": 1/17,
+#     "APA": 1/17,
+#     "AMAT": 1/17,
+#     "BKNG": 1/17,
+#     "COF": 1/17,
+#     "CAT": 1/17,
+#     "EXPE": 1/17,
+#     "KLAC": 1/17,
+#     "MU": 1/17,
+#     "NFLX": 1/17,
+#     "NVDA": 1/17,
+#     "STX": 1/17,
+#     "SM": 1/17,
+#     "WDC": 1/17,
+# }
+# BENCHMARK = "SPY"
+# START = "2005-10-01"  # preceding month to compute October 2025 return
+# END_EXCLUSIVE = "2026-11-01"  # stop after October 2026
+# FIRST_RETURN_MONTH = "2005-11-30"
+# LAST_RETURN_MONTH = "2026-10-31"
+
+
+# PORTFOLIO = {
+#     "ADBE": 1/26,
+#     "GOOGL": 1/26,
+#     "APH": 1/26,
+#     "ADI": 1/26,
+#     "APA": 1/26,
+#     "AMAT": 1/26,
+#     "BKNG": 1/26,
+#     "AVGO": 1/26,
+#     "COF": 1/26,
+#     "CAT": 1/26,
+#     "EXPE": 1/26,
+#     "KLAC": 1/26,
+#     "MGNI": 1/26,
+#     "MTCH": 1/26,
+#     "MU": 1/26,
+#     "NFLX": 1/26,
+#     "NVDA": 1/26,
+#     "NXPI": 1/26,
+#     "PR": 1/26,
+#     "STX": 1/26,
+#     "SM": 1/26,
+#     "SYF": 1/26,
+#     "TAL": 1/26,
+#     "VST": 1/26,
+#     "WDC": 1/26,
+#     "ZTO": 1/26,
+# }
+# BENCHMARK = "SPY"
+# START = "2016-10-01"  # preceding month to compute October 2016 return
+# END_EXCLUSIVE = "2026-11-01"  # stop after October 2026
+# FIRST_RETURN_MONTH = "2016-11-30"
+# LAST_RETURN_MONTH = "2026-10-31"
+# print("Number of stocks:", len(PORTFOLIO))
+# print("Total weight:", sum(PORTFOLIO.values()))
+
+
 ANNUAL_RISK_FREE = 0.045  # fixed illustrative assumption, not historical T-bill yield
 MANAGEMENT_FEE = 0.0050
 CUSTODY_FEE = 0.0006
@@ -92,7 +158,7 @@ def main():
 
     prices = get_monthly_prices()
     prices.to_csv(OUT / "VIE_monthly_adjusted_prices.csv", float_format="%.8f")
-    print(f"Saved monthly adjusted prices: {prices.shape[0]} months", flush=True)
+    print(f"Saved monthly adjusted prices: {prices.shape[0]} month's", flush=True)
 
     # Explicit coverage report makes IPO and missing-price issues visible.
     missing = prices.isna().sum().rename("missing_month_end_prices").to_frame()
